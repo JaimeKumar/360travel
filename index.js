@@ -124,12 +124,20 @@ window.addEventListener('popstate', function(event) {
     }
 });
 
+function hashRedir() {
+    const hash = window.location.hash.replace(/^#|#$/g, '');
+    loadPage(hash);
+}
+
 window.onload = () => {
     const currentYear = new Date().getFullYear();
     document.getElementById('yearUpdate').innerHTML = `© 360 Travel, ${currentYear}`
 
-    setTimeout(() => {
-        const hash = window.location.hash.replace(/^#|#$/g, '');
-        loadPage(hash);
-    }, 5)
+    if (screen.width < 1000) {
+        setTimeout(() => {
+            hashRedir();
+        }, 10)
+    } else {
+        hashRedir();
+    }
 }
