@@ -12,8 +12,6 @@ function changePage(which) {
 }
 
 function loadPage(which) {
-    console.log('got to start of loadPage(' + which + ')')
-
     switch (which) {
         case '':
             which = 'home';
@@ -44,7 +42,6 @@ function loadPage(which) {
 
     document.getElementById(ids[which]).classList.add('onPage');
 
-    console.log('got to end of loadPage(' + which + ')')
     updateContent(which);
 }
 
@@ -127,10 +124,10 @@ window.addEventListener('popstate', function(event) {
     }
 });
 
-const currentYear = new Date().getFullYear();
-document.getElementById('yearUpdate').innerHTML = `© 360 Travel, ${currentYear}`
-
 window.onload = () => {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('yearUpdate').innerHTML = `© 360 Travel, ${currentYear}`
+
     const hash = window.location.hash.replace(/^#|#$/g, '');
     loadPage(hash);
 }
