@@ -36,7 +36,7 @@ function loadPage(which) {
     })
 
     document.getElementById('main').classList.remove('openMenu')
-    document.getElementById('menuButton').classList.remove("change");
+    // document.getElementById('menuButton').classList.remove("change");
 
     document.getElementById('content').scrollTo(0, 0);
 
