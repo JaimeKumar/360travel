@@ -343,7 +343,7 @@ body {
 
 .content {
     width: 100%;
-    height: calc(100% - clamp(90px, 13vh, 120px) - clamp(80px, 12vh, 100px));
+    height: calc(100% - clamp(90px, 13vh, 120px) - clamp(80px, 12vh, 100px) - 35px);
     padding: 10px 100px 0 100px;
     position: relative;
     overflow: auto;
