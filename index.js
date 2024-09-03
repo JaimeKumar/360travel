@@ -18,29 +18,29 @@ function loadPage(which) {
         case 'home':
             document.getElementById('bkg').classList.remove('bkgBlur');
             document.getElementById('bkgDark').classList.remove('bkgDarkOn');
-            // document.getElementById('menuButton').classList.add('onHome');
+            document.getElementById('menuButton').classList.add('onHome');
             document.getElementById('homeLinks').classList.remove('hideHome');
             break;
         default:
             document.getElementById('bkg').classList.add('bkgBlur');
             document.getElementById('bkgDark').classList.add('bkgDarkOn');
-            // document.getElementById('menuButton').classList.remove('onHome');
+            document.getElementById('menuButton').classList.remove('onHome');
             document.getElementById('homeLinks').classList.add('hideHome');
             break;
     }
 
     var ids = {'home': "homeLink", 'vt': "viewTripLink", 'business-travel': "bizzLink", 'faqs': "faqLink", 'contact': "contactLink"};
 
-    // Object.values(ids).forEach(id => {
-    //     document.getElementById(id).classList.remove('onPage');
-    // })
+    Object.values(ids).forEach(id => {
+        document.getElementById(id).classList.remove('onPage');
+    })
 
     document.getElementById('main').classList.remove('openMenu')
-    // document.getElementById('menuButton').classList.remove("change");
+    document.getElementById('menuButton').classList.remove("change");
 
     document.getElementById('content').scrollTo(0, 0);
 
-    // document.getElementById(ids[which]).classList.add('onPage');
+    document.getElementById(ids[which]).classList.add('onPage');
     updateContent(which);
 }
 
@@ -55,10 +55,12 @@ function updateContent(which) {
 
     if (idArray[page]!="" && idArray[page]!=-1) {
         document.getElementById(idArray[page]).classList.remove('contentVisible');
+        console.log('remove contVis on: ' + page);
     }
 
     if (idArray[which]!="" && idArray[which]!=-1) {
         document.getElementById(idArray[which]).classList.add('contentVisible');
+        console.log('contVis on: ' + which);
     }
 
     page = which;
