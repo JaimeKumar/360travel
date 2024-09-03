@@ -12,6 +12,8 @@ function changePage(which) {
 }
 
 function loadPage(which) {
+    console.log('got to start of loadPage(' + which + ')')
+
     switch (which) {
         case '':
             which = 'home';
@@ -41,6 +43,8 @@ function loadPage(which) {
     document.getElementById('content').scrollTo(0, 0);
 
     document.getElementById(ids[which]).classList.add('onPage');
+
+    console.log('got to end of loadPage(' + which + ')')
     updateContent(which);
 }
 
@@ -52,6 +56,8 @@ function updateContent(which) {
         'faqs': "faqs",
         'contact': "contact"
     }
+
+    console.log('got to updateContent(' + which + ')')
 
     if (idArray[page]!="" && idArray[page]!=-1) {
         document.getElementById(idArray[page]).classList.remove('contentVisible');
