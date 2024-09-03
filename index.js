@@ -31,16 +31,16 @@ function loadPage(which) {
 
     var ids = {'home': "homeLink", 'vt': "viewTripLink", 'business-travel': "bizzLink", 'faqs': "faqLink", 'contact': "contactLink"};
 
-    Object.values(ids).forEach(id => {
-        document.getElementById(id).classList.remove('onPage');
-    })
+    // Object.values(ids).forEach(id => {
+    //     document.getElementById(id).classList.remove('onPage');
+    // })
 
     document.getElementById('main').classList.remove('openMenu')
     // document.getElementById('menuButton').classList.remove("change");
 
     document.getElementById('content').scrollTo(0, 0);
 
-    document.getElementById(ids[which]).classList.add('onPage');
+    // document.getElementById(ids[which]).classList.add('onPage');
     updateContent(which);
 }
 
