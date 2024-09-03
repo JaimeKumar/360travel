@@ -123,4 +123,4 @@ const currentYear = new Date().getFullYear();
 document.getElementById('yearUpdate').innerHTML = `© 360 Travel, ${currentYear}`
 
 const hash = window.location.hash.replace(/^#|#$/g, '');
-loadPage(hash);
+// loadPage(hash);
