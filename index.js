@@ -18,13 +18,13 @@ function loadPage(which) {
         case 'home':
             document.getElementById('bkg').classList.remove('bkgBlur');
             document.getElementById('bkgDark').classList.remove('bkgDarkOn');
-            document.getElementById('menuButton').classList.add('onHome');
+            // document.getElementById('menuButton').classList.add('onHome');
             document.getElementById('homeLinks').classList.remove('hideHome');
             break;
         default:
             document.getElementById('bkg').classList.add('bkgBlur');
             document.getElementById('bkgDark').classList.add('bkgDarkOn');
-            document.getElementById('menuButton').classList.remove('onHome');
+            // document.getElementById('menuButton').classList.remove('onHome');
             document.getElementById('homeLinks').classList.add('hideHome');
             break;
     }
