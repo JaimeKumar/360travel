@@ -128,8 +128,8 @@ window.onload = () => {
     const currentYear = new Date().getFullYear();
     document.getElementById('yearUpdate').innerHTML = `© 360 Travel, ${currentYear}`
 
-    const hash = window.location.hash.replace(/^#|#$/g, '');
-    loadPage(hash);
-    // setTimeout(() => {
-    // }, 3000)
+    setTimeout(() => {
+        const hash = window.location.hash.replace(/^#|#$/g, '');
+        loadPage(hash);
+    }, 5)
 }
