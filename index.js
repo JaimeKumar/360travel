@@ -77,11 +77,20 @@ function contentScroll() {
     const container = document.getElementById('content');
     const currentScrollPosition = container.scrollTop;
     const maxScrollPosition = container.scrollHeight - container.clientHeight;
-    const showBlur = currentScrollPosition < maxScrollPosition - 10;
-    if (showBlur) {
-        container.classList.add('showBlur');
+    const showBottomBlur = currentScrollPosition < maxScrollPosition - 10;
+    const showTopBlur = currentScrollPosition > 10;
+
+    if (showBottomBlur && showTopBlur) {
+        container.classList.add('showBothBlur');
+        container.classList.remove('showTopBlur', 'showBottomBlur');
+    } else if (showBottomBlur) {
+        container.classList.add('showBottomBlur');
+        container.classList.remove('showTopBlur', 'showBothBlur');
+    } else if (showTopBlur) {
+        container.classList.add('showTopBlur');
+        container.classList.remove('showBottomBlur', 'showBothBlur');
     } else {
-        container.classList.remove('showBlur');
+        container.classList.remove('showTopBlur', 'showBottomBlur', 'showBothBlur');
     }
 }
 

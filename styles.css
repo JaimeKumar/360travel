@@ -348,12 +348,31 @@ body {
     position: relative;
     overflow: auto;
     z-index: 100;
+    margin-top: 30px;
 }
 
-.showBlur {
-    -webkit-mask-image: linear-gradient(to bottom,black 80%,transparent 100%);
-    mask-image: linear-gradient(to bottom,black 80%,transparent 100%);
+/* Bottom blur effect */
+.showBottomBlur {
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
+
+/* Top blur effect */
+.showTopBlur {
+    -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+    mask-image: linear-gradient(to top, black 80%, transparent 100%);
+}
+
+/* Both top and bottom blur effects */
+.showBothBlur {
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%), 
+                        linear-gradient(to top, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%), 
+                linear-gradient(to top, black 80%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: destination-in;
+}
+
 
 .content::-webkit-scrollbar {
     display: none;
@@ -473,6 +492,7 @@ h1 {
     color: white;
     text-decoration: none;
     text-align: center;
+    font-size: clamp(0.9em, 4vw, 1rem);
 }
 
 .hideHome {
@@ -534,6 +554,7 @@ h1 {
 
     .navLink {
         height: auto;
+        font-size: clamp(0.9em, 4vw, 1rem);
     }
 
     .menuButton {
@@ -542,7 +563,7 @@ h1 {
 
     .content {
         left: 160px;
-        top: calc((clamp(120px, 30vw, 200px) * 0.525) + 35px);
+        top: calc((clamp(120px, 30vw, 200px) * 0.525) + 10px);
         width: calc(100% - 160px);
         height: calc(100% - clamp(80px, 12vh, 100px) - ((clamp(120px, 30vw, 200px) * 0.525) + 35px));
         padding: 0 clamp(30px, 8vw, 50px);
