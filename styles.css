@@ -8,11 +8,12 @@
 }
 
 .cornerFade {
-    background: linear-gradient(to bottom left, #ffffff33, transparent 50%, transparent 50%);
+    background: linear-gradient(to bottom left, #7be0ff69, transparent 55%, transparent 45%);
+    /* background: linear-gradient(to bottom, #90e5ff61, transparent 45%); */
     position: absolute;
     right: 0;
     top: 0;
-    height: 260px;
+    height: 400px;
     width: 100vw;
     z-index: -1;
     display: none;
