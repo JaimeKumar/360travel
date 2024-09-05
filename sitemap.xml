@@ -1,0 +1,35 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Main SPA page -->
+  <url>
+    <loc>https://360travel.co.uk</loc>
+    <lastmod>2024-09-05</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Other pages without trailing slashes -->
+  <url>
+    <loc>https://360travel.co.uk/no-js/</loc>
+    <lastmod>2024-09-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://360travel.co.uk/contact-us/</loc>
+    <lastmod>2024-09-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://domain.com/business-travel/</loc>
+    <lastmod>2024-09-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://domain.com/faqs/</loc>
+    <lastmod>2024-09-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>

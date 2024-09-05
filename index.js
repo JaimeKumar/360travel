@@ -54,16 +54,12 @@ function updateContent(which) {
         'contact': "contact"
     }
 
-    console.log('got to updateContent(' + which + ')')
-
     if (idArray[page]!="" && idArray[page]!=-1) {
         document.getElementById(idArray[page]).classList.remove('contentVisible');
-        console.log('remove contVis on: ' + page);
     }
 
     if (idArray[which]!="" && idArray[which]!=-1) {
         document.getElementById(idArray[which]).classList.add('contentVisible');
-        console.log('contVis on: ' + which);
     }
 
     page = which;
